@@ -1,0 +1,18 @@
+{% extends 'plantilla.html' %}
+{% block title %}
+    {{super()}}
+    Bienvenidos
+{% endblock %}
+
+{% block content %}
+<div id="error-block">
+    <div id="error-img">
+        <img src=" {{ url_for('static', filename='img/index.gif')}} " alt="tecleando">
+    </div>
+    <div id="error-txt">
+        <h1>Trabajo integrador</h1>
+        <h3>Full Stack Python</h3>
+        <p>Comienza por <a href=" {{url_for('lista')}} ">revisar el contenido de la data</a> </p>
+    </div>
+</div>
+{% endblock %}

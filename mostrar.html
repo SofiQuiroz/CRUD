@@ -1,0 +1,48 @@
+{% extends 'plantilla.html' %}
+
+{% block title %}
+    {{super()}}
+    Mostrar datos
+{% endblock %}
+{% block seccion %}
+<h1>Listado de películas</h1>
+{% endblock %}
+{% block content %}
+<table class="table table-striped">
+    <thead>
+        <tr class="success">
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellido</th>
+            <th scope="col">Ciudad</th>
+            <th scope="col">Provincia</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for x in lista %}
+            <tr> 
+                <td> {{ x[1] }} </td>
+                <td> {{ x[2] }} </td> 
+                <td> {{ x[3] }} </td>
+                <td> {{ x[4] }} </td>
+                <td><!-- Editar - Borrar -->
+                    <div class="bt-toolbar" role="toolbar">
+                        <button type="button" class="btn btn-success" value="{{x[0]}}">
+                            <span class="glyphicon gliphico-edit">
+                                <a href="">Editar</a>
+                            </span>
+                        </button>
+                        <button type="button" class="btn btn-danger" value="{{x[0]}}">
+                            <span class="glyphicon gliphico-edit">
+                                <a href="{{ url_for('borrar', id=x[0]) }}">Borrar</a>
+                            </span>
+                        </button>
+                    </div>
+                </td> 
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
+
