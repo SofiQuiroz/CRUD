@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Oxygen&display=swap");
+
+*,
+.texto-boton {
+  font-family: "Oxygen", sans-serif;
+}
+
+.blanco,
+.blanco:link {
+  color: white;
+  text-decoration: none;
+}
+
+.blanco:hover {
+  color: yellow;
+  text-decoration: none;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0px;
+}
+
+#supra {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "nav"
+    "main"
+    "footer";
+  min-height: 100vh;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+  padding-bottom: 0px;
+  margin: auto 0px 0px 0px;
+
+}
+
+#error-block {
+  display: flex;
+  padding: 0px auto;
+  line-height: 1.3em;
+  justify-content: center;
+  align-content: center;
+}
+
+#error-txt,
+#error-img {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  min-height: max-content;
+  margin: 1em 1em;
+}
+
+#error-img > img {
+  width: 93%;
+}
+
+.form {
+  box-sizing: content-box;
+  max-width: 50%;
+  justify-content: center;
+  padding: 1.5em;
+}
+
+h1,
+h2,
+h3,
+footer p {
+  text-align: center;
+}
+
+#alerta {
+  margin: 0em 26em;
+}
+
+.navbar {
+  padding-top: 0.15em;
+  padding-bottom: 0.15em;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 601px) {
+  #error-block {
+    flex-direction: column;
+    padding: 0px 0.2em;
+    padding-bottom: 1em;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #error-block {
+    flex-direction: column;
+    padding: 0px 0.2em;
+    padding-bottom: 1em;
+    min-height: 100vh;
+  }
+  footer {
+    margin: auto 0px 0px 0px;        
+    position:relative;     
+  }
+}
