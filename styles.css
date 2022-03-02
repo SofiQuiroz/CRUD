@@ -94,6 +94,10 @@ footer p {
   padding-bottom: 0.15em;
 }
 
+
+
+
+
 @media screen and (max-width: 1200px) and (min-width: 601px) {
   #error-block {
     flex-direction: column;
